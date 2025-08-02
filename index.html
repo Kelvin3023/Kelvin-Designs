@@ -65,7 +65,6 @@
       background-color: var(--accent-color);
     }
 
-    /* Unique Nav Links */
     nav.nav-links {
       display: flex;
       flex-direction: column;
@@ -75,11 +74,11 @@
     }
 
     nav.nav-links a {
-      background-color: #fff;
+      background-color: var(--accent-color); /* Changed from white to orange */
       border-radius: 16px;
       padding: 12px 24px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-      color: #000;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       transition: all 0.3s;
@@ -89,7 +88,7 @@
     }
 
     nav.nav-links a:hover {
-      background-color: var(--accent-color);
+      background-color: var(--primary-color);
       color: white;
     }
 
@@ -207,7 +206,7 @@
 </head>
 <body>
   <header>
-    <img src="kg1.jpg" alt="Kelvin Profile Picture" class="profile-pic" />
+    <img src="logo.jpg" alt="Kelvin Logo" class="profile-pic" />
     <div class="hero-content">
       <h1>Designing the Future</h1>
       <p>I'm Kelvin — Graphic Designer & Visual Artist with a futuristic vision.</p>
@@ -219,7 +218,6 @@
     <h2>About Me</h2>
     <p>HELLO!, Am Lotanna Kelvin, the CEO of Kelvin Graphics, we offer premium design solutions to suit your brand...</p>
     
-    <!-- Theme Switch -->
     <div class="theme-switch">
       <span class="switch-label">Dark Mode</span>
       <label class="switch">
@@ -228,7 +226,6 @@
       </label>
     </div>
 
-    <!-- Navigation -->
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -290,7 +287,7 @@
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn">Send to Kelvin</button>
     </form>
 
     <div class="contact-info">
