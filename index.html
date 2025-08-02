@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelvin Graphics</title>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -17,6 +16,7 @@
     }
 
     body {
+      margin: 0;
       font-family: 'Outfit', sans-serif;
       background-color: var(--light-bg);
       color: var(--light-text);
@@ -28,51 +28,79 @@
       color: var(--dark-text);
     }
 
-    .btn {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.7em 1.5em;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: var(--accent-color);
-    }
-
-    .navbar, .footer, .section {
+    header {
+      text-align: center;
       padding: 20px;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.5em;
     }
 
     .profile-pic {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      margin: 20px auto;
-      display: block;
       object-fit: cover;
+      margin: 20px auto;
     }
 
-    .toggle-theme {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background: var(--accent-color);
-      color: white;
+    .hero-content h1 {
+      font-size: 2em;
+    }
+
+    .hero-content p {
+      margin: 10px 0;
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 10px 20px;
       border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: var(--accent-color);
+    }
+
+    nav.nav-links {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav.nav-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav.nav-links li {
+      display: inline-block;
+      margin: 10px 15px;
+    }
+
+    nav.nav-links a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .card-grid, .portfolio-grid, .design-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
     }
 
     .card, .portfolio-item, .design-item {
+      max-width: 300px;
       transition: transform 0.3s;
     }
 
@@ -80,38 +108,97 @@
       transform: translateY(-10px);
     }
 
-    .portfolio-grid, .design-grid {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
     .portfolio-item img, .design-item img {
       width: 100%;
       border-radius: 10px;
-      max-width: 300px;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
     }
 
     .contact-info {
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--light-bg);
+      color: var(--light-text);
+    }
+
+    body.dark-mode .footer {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 10px;
+    }
+
+    .switch-label {
+      margin-right: 10px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      top: 0; left: 0;
+      right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--accent-color);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(26px);
     }
   </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="toggleTheme()">Toggle Mode</button>
-
-  <header class="hero">
-    <nav class="navbar">
-      <div class="logo">Kelvin Graphics</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#design">Design</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <header>
     <img src="kg1.jpg" alt="Kelvin Profile Picture" class="profile-pic" />
     <div class="hero-content">
       <h1>Designing the Future</h1>
@@ -120,9 +207,30 @@
     </div>
   </header>
 
-  <section id="about" class="section about">
+  <section class="section about" id="about">
     <h2>About Me</h2>
     <p>HELLO!, Am Lotanna Kelvin, the CEO of Kelvin Graphics, we offer premium design solutions to suit your brand. Kelvin graphics is all about efficient and unique designs, we specialize in brand identity and also emotion graphics. Let's bring your vision to life.</p>
+    
+    <!-- Theme Switch -->
+    <div class="theme-switch">
+      <span class="switch-label">Dark Mode</span>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleTheme()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- Nav moved under About -->
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#design">Design</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </section>
 
   <section id="services" class="section services">
@@ -171,7 +279,7 @@
 
   <section id="contact" class="section contact">
     <h2>Contact</h2>
-    <form action="#" method="POST" class="contact-form">
+    <form class="contact-form" onsubmit="sendEmail(event)">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
@@ -191,6 +299,16 @@
   <script>
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
+    }
+
+    function sendEmail(e) {
+      e.preventDefault();
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const message = e.target.message.value;
+
+      const mailtoLink = `mailto:chinonyeemiliaanyachebelu@gmail.com?subject=New Contact From ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+      window.location.href = mailtoLink;
     }
   </script>
 </body>
