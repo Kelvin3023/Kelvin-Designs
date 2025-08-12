@@ -5,215 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kelvin Graphics</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Kelvin Graphics — Graphic Designer & Visual Artist creating premium brand identities, UI/UX designs, and motion graphics." />
+  <meta name="keywords" content="Kelvin Graphics, graphic design, UI/UX, motion graphics, brand identity, Nigeria designer" />
+  <meta name="author" content="Lotanna Kelvin" />
   <style>
-    :root {
-      --primary-color: #007BFF;
-      --accent-color: #FF6B00;
-      --light-bg: #ffffff;
-      --dark-bg: #1a1a1a;
-      --light-text: #1a1a1a;
-      --dark-text: #ffffff;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background-color: var(--light-bg);
-      color: var(--light-text);
-      transition: all 0.3s ease;
-    }
-
-    body.dark-mode {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .profile-pic {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 20px auto;
-    }
-
-    .hero-content h1 {
-      font-size: 2em;
-    }
-
-    .hero-content p {
-      margin: 10px 0;
-    }
-
-    .btn {
-      background-color: var(--primary-color);
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    .btn:hover {
-      background-color: var(--accent-color);
-    }
-
-    nav.nav-links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-      gap: 10px;
-    }
-
-    nav.nav-links a {
-      background-color: var(--accent-color); /* Changed from white to orange */
-      border-radius: 16px;
-      padding: 12px 24px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-      width: 80%;
-      max-width: 300px;
-      text-align: center;
-    }
-
-    nav.nav-links a:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
-
-    .section {
-      padding: 30px 20px;
-      text-align: center;
-    }
-
-    .card-grid, .portfolio-grid, .design-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .card, .portfolio-item, .design-item {
-      max-width: 300px;
-      transition: transform 0.3s;
-    }
-
-    .card:hover, .portfolio-item:hover, .design-item:hover {
-      transform: translateY(-10px);
-    }
-
-    .portfolio-item img, .design-item img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .contact-form input, .contact-form textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      width: 100%;
-    }
-
-    .contact-info {
-      margin-top: 20px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background-color: var(--light-bg);
-      color: var(--light-text);
-    }
-
-    body.dark-mode .footer {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-    }
-
-    .theme-switch {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10px;
-    }
-
-    .switch-label {
-      margin-right: 10px;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 50px;
-      height: 24px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      top: 0; left: 0;
-      right: 0; bottom: 0;
-      background-color: #ccc;
-      transition: 0.4s;
-      border-radius: 34px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 18px;
-      width: 18px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: 0.4s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: var(--accent-color);
-    }
-
-    input:checked + .slider:before {
-      transform: translateX(26px);
-    }
+    /* Keep all your previous styles here without change */
+    /* ... your existing CSS ... */
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.jpg" alt="Kelvin Logo" class="profile-pic" />
-    <div class="hero-content">
-      <h1>Designing the Future</h1>
-      <p>I'm Kelvin — Graphic Designer & Visual Artist with a futuristic vision.</p>
-      <a href="#portfolio" class="btn">Explore My Work</a>
-    </div>
-  </header>
 
+  <!-- About Me moved before Hero -->
   <section class="section about" id="about">
     <h2>About Me</h2>
     <p>HELLO!, Am Lotanna Kelvin, the CEO of Kelvin Graphics, we offer premium design solutions to suit your brand...</p>
@@ -236,6 +38,17 @@
     </nav>
   </section>
 
+  <!-- Hero Section -->
+  <header>
+    <img src="logo.jpg" alt="Kelvin Logo" class="profile-pic" />
+    <div class="hero-content">
+      <h1>Designing the Future</h1>
+      <p>I'm Kelvin — Graphic Designer & Visual Artist with a futuristic vision.</p>
+      <a href="#portfolio" class="btn">Explore My Work</a>
+    </div>
+  </header>
+
+  <!-- Services -->
   <section id="services" class="section services">
     <h2>Services</h2>
     <div class="card-grid">
@@ -254,35 +67,39 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="project" class="section project">
     <h2>Projects</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="12.jpg" alt="Project 1" /></div>
-      <div class="portfolio-item"><img src="13.jpg" alt="Project 2" /></div>
+      <div class="portfolio-item"><img src="12.jpg" alt="Project 1" loading="lazy" /></div>
+      <div class="portfolio-item"><img src="13.jpg" alt="Project 2" loading="lazy" /></div>
     </div>
   </section>
 
+  <!-- Design -->
   <section id="design" class="section design">
     <h2>Design</h2>
     <div class="design-grid">
-      <div class="design-item"><img src="14.png" alt="Design 1" /></div>
-      <div class="design-item"><img src="15.jpg" alt="Design 2" /></div>
-      <div class="design-item"><img src="16.png" alt="Design 3" /></div>
+      <div class="design-item"><img src="14.png" alt="Design 1" loading="lazy" /></div>
+      <div class="design-item"><img src="15.jpg" alt="Design 2" loading="lazy" /></div>
+      <div class="design-item"><img src="16.png" alt="Design 3" loading="lazy" /></div>
     </div>
   </section>
 
+  <!-- Portfolio -->
   <section id="portfolio" class="section portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="school.png" alt="School Project" /></div>
-      <div class="portfolio-item"><img src="logo.png" alt="Logo Project" /></div>
-      <div class="portfolio-item"><img src="business.jpg" alt="Business Design" /></div>
+      <div class="portfolio-item"><img src="school.png" alt="School Project" loading="lazy" /></div>
+      <div class="portfolio-item"><img src="logo.png" alt="Logo Project" loading="lazy" /></div>
+      <div class="portfolio-item"><img src="business.jpg" alt="Business Design" loading="lazy" /></div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact</h2>
-    <form class="contact-form" name="contact" method="POST" data-netlify="true">
+    <form class="contact-form" name="contact" method="POST" data-netlify="true" action="success.html">
       <input type="hidden" name="form-name" value="contact" />
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
